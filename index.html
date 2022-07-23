@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+      <div class="logo">
+        <a href="#"><img src="/images/logo.svg" alt=""></a>
+      </div>
+      <div class="main">
+        <h1><b>We're</b><br> coming <br> soon</h1>
+  
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+  
+        <form id="formSubmit" class="inputContainer">
+          <input class="input" type="email" name="" id="email" placeholder="Email Address" required>
+          <button id="muda" class="btn" type="submit"><img src="/images/icon-arrow.svg" alt="" ></button>
+          <p class="normal" id="aviso">please, provide a valid email</p>
+        </form>
+        <aside class="attribution">
+          <p >
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/RafaelAF" target="_blank">Antonio Rafael</a>.
+          </p>
+        </aside>
+      </div>
+      
+      <div class="img">
+      </div>
+
+  </div>
+  
+  <script>
+    let form = document.querySelector('#formSubmit');
+    let btn = document.getElementById('muda');
+    let aviso = document.querySelector('#aviso');
+    let email = document.querySelector('#email');
+
+    btn.addEventListener('click',(e)=>{
+      if(!validateEmail(email.value)){
+        aviso.style.color = 'red';
+      }
+    })
+
+    function validateEmail(email) 
+    {
+        let re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    
+    
+    
+    
+  </script>
+</body>
+</html>
